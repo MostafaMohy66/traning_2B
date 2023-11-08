@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".AddProductFragment">
+
+
+    <EditText
+        android:id="@+id/edProductName"
+        style="@style/edit_box"
+        android:textColor="#000000"
+        android:textColorHint="#9E9D9D"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/edQuantity"
+        style="@style/edit_box"
+        android:textColor="#000000"
+        android:textColorHint="#9E9D9D"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/edPrice"
+        style="@style/edit_box"
+        android:textColor="#000000"
+        android:textColorHint="#9E9D9D"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/tx_label"
+        android:text="@string/product_name"
+        app:layout_constraintBottom_toTopOf="@+id/edProductName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/tx_label"
+        android:text="@string/product_quantity"
+        app:layout_constraintBottom_toTopOf="@+id/edQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edProductName" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/tx_label"
+        android:text="@string/product_price"
+        app:layout_constraintBottom_toTopOf="@+id/edPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edQuantity" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="162dp"
+        android:layout_height="72dp"
+        android:backgroundTint="@color/black"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDisplayProducts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edPrice" />
+
+    <Button
+        android:id="@+id/btnDisplayProducts"
+        android:layout_width="162dp"
+        android:layout_height="72dp"
+        android:backgroundTint="@color/black"
+        android:text="Products"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

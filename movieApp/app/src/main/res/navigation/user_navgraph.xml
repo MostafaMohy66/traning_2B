@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navgraph"
+    app:startDestination="@id/signupFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.movieapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.movieapp.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_sign_up2Fragment"
+            app:destination="@id/sign_up2Fragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sign_up2Fragment"
+        android:name="com.example.movieapp.Sign_up2Fragment"
+        android:label="fragment_sign_up2"
+        tools:layout="@layout/fragment_sign_up2" >
+        <action
+            android:id="@+id/action_sign_up2Fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.movieapp.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_addProductFragment_to_listProductsFragment"
+            app:destination="@id/listProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listProductsFragment"
+        android:name="com.example.movieapp.ListProductsFragment"
+        android:label="fragment_list_products"
+        tools:layout="@layout/fragment_list_products" />
+    <fragment
+        android:id="@+id/updateProductFragment"
+        android:name="com.example.movieapp.UpdateProductFragment"
+        android:label="fragment_update_product"
+        tools:layout="@layout/fragment_update_product" >
+        <action
+            android:id="@+id/action_updateProductFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+    </fragment>
+</navigation>
